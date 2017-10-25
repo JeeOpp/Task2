@@ -15,8 +15,7 @@ import java.util.regex.Pattern;
  * Created by DNAPC on 21.10.2017.
  */
 public class EntityDAOImpl implements EntityDAO {
-    public static final String PATH = "locator.xml";
-    //public static final String PATH = "./out/production/task02/locator.xml";
+    private static final String PATH = "studs.xml";
 
     public EntityDAOImpl(){}
 
