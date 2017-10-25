@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<GPS_Storage xmlns:xsi="http://www.w3.org/2001/XMLSchemainstance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Tracks> 
+<Track>
+<ID>1</ID> 
+<Name>На краю Земли</Name> 
+<LineWeight>5</LineWeight> 
+<LineOpacity>1</LineOpacity>
+<Color>#000000</Color> 
+<Planned> 
+<ID>-1</ID>
+<Name>Плановый для на краю Земли</Name>
+<LineWeight>2</LineWeight>
+<LineOpacity>1</LineOpacity>
+<Color>#000000</Color>
+</Planned>
+</Track>
+</Tracks>
+<TrackPoints> 
+<TrackPoint>
+<TrackID>1</TrackID> 
+<Latitude>0</Latitude> 
+<Longitude>0</Longitude> 
+</TrackPoint>
+<TrackPoint>
+<TrackID>1</TrackID>
+<Latitude>1</Latitude>
+<Longitude>1</Longitude>
+</TrackPoint>
+<TrackPoint>
+<TrackID>-1</TrackID>
+<Latitude>0</Latitude>
+<Longitude>0.1</Longitude>
+</TrackPoint>
+<TrackPoint>
+<TrackID>-1</TrackID>
+<Latitude>1</Latitude>
+<Longitude>0.9</Longitude>
+</TrackPoint>
+</TrackPoints>
+<Points> 
+<MapPoint>
+<TrackID>1</TrackID> 
+<HTML_Desc>&lt;b&gt;Начало фактического маршрута&lt;/b&gt;</HTML_Desc> 
+<Latitude>0</Latitude> 
+<Longitude>0</Longitude> 
+<Image>http://www.google.com/favicon.ico</Image>
+<TypeName>begin</TypeName> 
+</MapPoint>
+<MapPoint>
+<TrackID>1</TrackID>
+<HTML_Desc>&lt;b&gt;Конец фактического
+маршрута&lt;/b&gt;</HTML_Desc>
+<Latitude>1</Latitude>
+<Longitude>1</Longitude>
+<Image>http://ya.ru/favicon.ico</Image>
+<TypeName>end</TypeName>
+</MapPoint>
+<MapPoint>
+<TrackID>-1</TrackID>
+<HTML_Desc>&lt;b&gt;Начало планируемого
+маршрута&lt;/b&gt;</HTML_Desc>
+<Latitude>0</Latitude>
+<Longitude>0.1</Longitude>
+<Image>http://www.google.com/favicon.ico</Image>
+<TypeName>begin</TypeName>
+</MapPoint>
+<MapPoint>
+<TrackID>-1</TrackID>
+<HTML_Desc>&lt;b&gt;Конец планируемого
+маршрута&lt;/b&gt;</HTML_Desc>
+<Latitude>1</Latitude>
+<Longitude>0.9</Longitude>
+<Image>http://ya.ru/favicon.ico</Image>
+<TypeName>end</TypeName>
+</MapPoint>
+</Points>
+<Legend> 
+<LegendEntry>
+<Name>Начало</Name> 
+<Image>http://www.google.com/favicon.ico</Image>
+<TypeName>begin</TypeName> 
+<DefaultVisible>false</DefaultVisible> 
+</LegendEntry>
+<LegendEntry>
+<Name>Конец</Name>
+<Image>http://ya.ru/favicon.ico</Image>
+<TypeName>end</TypeName>
+<DefaultVisible>false</DefaultVisible>
+</LegendEntry>
+</Legend>
+</GPS_Storage>
