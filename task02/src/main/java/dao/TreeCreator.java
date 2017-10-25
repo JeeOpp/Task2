@@ -70,8 +70,9 @@ public class TreeCreator {
         current.setName(splittedLineXML.get(0));
         if (splittedLineXML.size() > 1) {
             splittedLineXML.remove(0);
+            String[] splittedAttributes;
             for (String attributes : splittedLineXML) {
-                String[] splittedAttributes = attributes.split("=");
+                splittedAttributes = attributes.split("=");
                 String key = splittedAttributes[0];
                 String value = splittedAttributes[1].substring(1,splittedAttributes[1].length()-1);
                 current.getAttributes().put(key,value);
