@@ -58,7 +58,7 @@ public class Entity implements Printable {
     public void print(PrintStream printStream, String tab) {
         if (!attributes.isEmpty()){
             for (Map.Entry attribute:attributes.entrySet()){
-                printStream.print(attribute.getKey()+" = "+attribute.getValue()+" ");
+                printStream.print(tab+attribute.getKey()+" = "+attribute.getValue()+" ");
             }
             printStream.println();
         }
@@ -70,7 +70,6 @@ public class Entity implements Printable {
         }
         if(value!=null){
             printStream.println(tab+name+" = "+value);
-            //printStream.println();
         }
     }
 }

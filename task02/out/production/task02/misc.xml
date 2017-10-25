@@ -7,10 +7,12 @@
     <record id="101">
       <height>10</height>
       <width>30</width>
+      <br it="121"/>
     </record>
       <record id="102">
       <height>20</height>
-    <width>40</width>
+      <width>40</width>
+      <br it="212"/>
     </record>
   </records_list>
 </root_node>
