@@ -52,7 +52,10 @@ public class EntityDAOImpl implements EntityDAO {
     }
 
     private List<String> splitLineXML(String lineXML){
-        Pattern pattern = Pattern.compile("(<?[^>]*>)");
+        String patternLine = "<?[^>]*>";
+        String xmlDeclaration = "<?xml";
+
+        Pattern pattern = Pattern.compile(patternLine);
         Matcher matcher = pattern.matcher(lineXML);
 
         List<String> linesXML = new ArrayList<>();
@@ -60,7 +63,7 @@ public class EntityDAOImpl implements EntityDAO {
             System.out.println(lineXML.substring(matcher.start(), matcher.end()));
             linesXML.add(lineXML.substring(matcher.start(), matcher.end()));
         }
-        if(linesXML.get(0).contains("<?xml")) {
+        if(linesXML.get(0).contains(xmlDeclaration)) {
             linesXML.remove(0);
         }
         return linesXML;

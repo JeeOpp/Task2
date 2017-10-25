@@ -40,16 +40,14 @@ public class TreeCreator {
                 fillWithNameAndAttributes(current, lineXML);
                 if (isSingleTag(lineXML)){
                     current = parent;
-                    if (parent!=null && parent.getParent()!=null)
-                        parent = parent.getParent();
+                    parent = changeParent(parent);
                 }
             }else{
                 if (!isClosingTag(lineXML)) {
                     fillValues(current, lineXML);
                 }
                 current = parent;
-                if (parent!=null && parent.getParent()!=null)
-                    parent = parent.getParent();
+                parent = changeParent(parent);
             }
         }
         return root;
@@ -85,5 +83,12 @@ public class TreeCreator {
 
     private void fillValues(Entity current, String lineXML){
         current.setValue(lineXML.split("<")[0]);
+    }
+
+    private Entity changeParent(Entity parent){
+        if (parent!=null && parent.getParent()!=null) {
+            parent = parent.getParent();
+        }
+        return parent;
     }
 }
