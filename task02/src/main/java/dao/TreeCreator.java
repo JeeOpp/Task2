@@ -20,12 +20,10 @@ public class TreeCreator {
     }
 
     public Entity createTreeStructure(List<String> linesXML){
-        Entity root = null;
+        Entity root = new Entity();
+        Entity current = root;
         Entity parent = null;
-        Entity current = null;
 
-        root = new Entity();
-        current = root;
         fillWithNameAndAttributes(current,linesXML.get(0));
         linesXML.remove(0);
 

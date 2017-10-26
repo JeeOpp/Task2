@@ -13,9 +13,9 @@ import java.util.List;
  * Created by DNAPC on 21.10.2017.
  */
 public class ParserServiceImpl implements ParserService{
-    public Entity parseXML() throws IOException{
+    public Entity parseXML(String PATH) throws IOException{
         DAOFactory daoFactory = DAOFactory.getInstance();
         EntityDAO entityDAO = daoFactory.getEntityDAO();
-        return entityDAO.parseXML();
+        return entityDAO.parseXML(PATH);
     }
 }

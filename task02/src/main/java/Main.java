@@ -8,12 +8,16 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        final String PATH = "misc.xml";
+
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         ParserService parserService;
         try {
             parserService = serviceFactory.getParserService();
-            Entity entity = parserService.parseXML();
-            entity.print(System.out,"");
+            Entity entity = parserService.parseXML(PATH);
+            if(entity!=null) {
+                entity.print(System.out, "");
+            }
         }catch (IOException ex){
             ex.printStackTrace();
         }

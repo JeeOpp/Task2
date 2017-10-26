@@ -72,6 +72,7 @@ public class Entity implements Printable {
             printStream.println(tab+name+" = "+value);
         }
     }
+
 }
 
 

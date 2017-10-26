@@ -15,16 +15,14 @@ import java.util.regex.Pattern;
  * Created by DNAPC on 21.10.2017.
  */
 public class EntityDAOImpl implements EntityDAO {
-    private static final String PATH = "studs.xml";
-
     public EntityDAOImpl(){}
 
-    public Entity parseXML(){
+    public Entity parseXML(String PATH){
         Entity entity;
         String lineXML;
         List<String> linesXML;
         TreeCreator treeCreator = TreeCreator.getInstance();
-        if((lineXML = readXML()).isEmpty()){
+        if((lineXML = readXML(PATH)).isEmpty()){
             return null;
         }else{
             linesXML = splitLineXML(lineXML);
@@ -33,7 +31,7 @@ public class EntityDAOImpl implements EntityDAO {
         return entity;
     }
 
-    private String readXML() {
+    private String readXML(String PATH) {
         BufferedReader bufferedReader;
         String line="";
         String currentLine="";
@@ -59,7 +57,6 @@ public class EntityDAOImpl implements EntityDAO {
 
         List<String> linesXML = new ArrayList<>();
         while (matcher.find()) {
-            System.out.println(lineXML.substring(matcher.start(), matcher.end()));
             linesXML.add(lineXML.substring(matcher.start(), matcher.end()));
         }
         if(linesXML.get(0).contains(xmlDeclaration)) {
