@@ -40,6 +40,7 @@ public class EntityDAOImpl implements EntityDAO {
             while ((currentLine = bufferedReader.readLine()) != null) {
                 line+=currentLine.trim();
             }
+            bufferedReader.close();
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {
