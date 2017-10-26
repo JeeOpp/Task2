@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        final String PATH = "misc.xml";
+        final String PATH = "locator.xml";
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         ParserService parserService;
