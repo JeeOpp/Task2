@@ -10,10 +10,11 @@ public final class DAOFactory {
     private final EntityDAO entityDAO = new EntityDAOImpl();
 
     private DAOFactory(){}
-    public EntityDAO getEntityDAO(){
-        return entityDAO;
-    }
+
     public static DAOFactory getInstance(){
         return instance;
+    }
+    public EntityDAO getEntityDAO(){
+        return entityDAO;
     }
 }

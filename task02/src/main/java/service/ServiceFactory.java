@@ -11,10 +11,10 @@ public class ServiceFactory {
 
     private ServiceFactory(){}
 
-    public ParserService getParserService(){
-        return parserService;
-    }
     public static ServiceFactory getInstance(){
         return instance;
+    }
+    public ParserService getParserService(){
+        return parserService;
     }
 }
