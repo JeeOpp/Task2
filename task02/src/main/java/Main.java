@@ -8,13 +8,13 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        final String PATH = "locator.xml";
+        final String path = "locator.xml";
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         ParserService parserService;
         try {
             parserService = serviceFactory.getParserService();
-            Entity entity = parserService.parseXML(PATH);
+            Entity entity = parserService.parseXML(path);
             if(entity!=null) {
                 entity.print(System.out, "");
             }

@@ -17,12 +17,12 @@ import java.util.regex.Pattern;
 public class EntityDAOImpl implements EntityDAO {
     public EntityDAOImpl(){}
 
-    public Entity parseXML(String PATH){
+    public Entity parseXML(String path){
         Entity entity;
         String lineXML;
         List<String> linesXML;
         TreeCreator treeCreator = TreeCreator.getInstance();
-        if((lineXML = readXML(PATH)).isEmpty()){
+        if((lineXML = readXML(path)).isEmpty()){
             return null;
         }else{
             linesXML = splitLineXML(lineXML);
@@ -31,12 +31,12 @@ public class EntityDAOImpl implements EntityDAO {
         return entity;
     }
 
-    private String readXML(String PATH) {
+    private String readXML(String path) {
         BufferedReader bufferedReader;
         String line="";
         String currentLine="";
         try {
-            bufferedReader = new BufferedReader(new FileReader(new File(PATH)));
+            bufferedReader = new BufferedReader(new FileReader(new File(path)));
             while ((currentLine = bufferedReader.readLine()) != null) {
                 line+=currentLine.trim();
             }
